@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Page, PageHero, ServiceBlock } from "@/components/Page";
 import { CTASection } from "@/components/CTASection";
 import { SectionWrapper, FadeInHeading } from "@/components/SectionWrapper";
@@ -31,17 +30,6 @@ export function IndustriesPage() {
         <div className="max-w-4xl mx-auto text-center">
           <FadeInHeading>Industry-Specific Data Security and Management Services</FadeInHeading>
           <p className="text-brand-mid leading-relaxed">SKSecureData provides tailored data security, data management and reporting solutions for organizations that manage sensitive information and require structured systems for protection, organization and decision-making. Our services are designed to address industry-specific challenges related to data risk, compliance, reporting and operational efficiency.</p>
-        </div>
-      </SectionWrapper>
-
-      <SectionWrapper bg="muted">
-        <div className="flex flex-wrap justify-center gap-3">
-          {inds.map((ind, i) => (
-            <motion.a key={ind.id} href={`#${ind.id}`} initial={{ y: 30, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
-              className="px-5 py-2 rounded-full bg-white shadow border border-gray-200 hover:border-brand-primary hover:text-brand-primary text-sm font-semibold text-brand-dark">
-              {ind.title.split(" for ")[1] || ind.title}
-            </motion.a>
-          ))}
         </div>
       </SectionWrapper>
 
