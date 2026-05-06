@@ -27,7 +27,7 @@ export function Header() {
             <button
               onClick={() => setMegaOpen(!megaOpen)}
               className="hidden md:flex items-center gap-1 text-xs font-bold tracking-widest text-brand-dark hover:text-brand-primary"
-              style={{ marginTop: "4px", paddingLeft: "0px" }}
+              style={{ marginTop: "-12px", paddingLeft: "0px" }}
             >
               {megaOpen ? <X size={14} /> : <Menu size={14} />} MENU
             </button>
