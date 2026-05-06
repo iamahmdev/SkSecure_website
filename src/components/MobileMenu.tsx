@@ -28,7 +28,11 @@ export function MobileMenu({ onClose, onExpert }: { onClose: () => void; onExper
           <div className="pt-3 space-y-2">
             {solutionsCategories.map(c => (
               <div key={c.title}>
-                <p className="text-xs font-bold text-brand-primary mt-2">{c.title}</p>
+                <button 
+                  onClick={() => handleSolutionClick(c.categoryId)} 
+                  className="text-xs font-bold text-brand-primary mt-2 hover:text-brand-secondary cursor-pointer">
+                  {c.title}
+                </button>
                 {c.items.map(i => (
                   <button 
                     key={i.name} 

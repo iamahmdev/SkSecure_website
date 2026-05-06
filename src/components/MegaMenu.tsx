@@ -51,7 +51,11 @@ export function MegaMenu({ onClose }: { onClose: () => void }) {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {solutionsCategories.map(cat => (
                   <div key={cat.title}>
-                    <h4 className="font-bold text-brand-primary text-sm tracking-wider mb-2">{cat.title}</h4>
+                    <button 
+                      onClick={() => handleSolutionClick(cat.categoryId)} 
+                      className="font-bold text-brand-primary text-sm tracking-wider mb-2 hover:text-brand-secondary cursor-pointer">
+                      {cat.title}
+                    </button>
                     <ul className="space-y-1.5">
                       {cat.items.map(it => (
                         <li key={it.name}>

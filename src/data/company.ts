@@ -47,6 +47,7 @@ export const heroSlides = [
 export const solutionsCategories = [
   {
     title: "DATA MANAGEMENT",
+    categoryId: "svc1", // Main category links to first service
     items: [
       { name: "Data Cleaning & Validation", id: "svc1" },
       { name: "Data Organization", id: "svc1" },
@@ -56,6 +57,7 @@ export const solutionsCategories = [
   },
   {
     title: "DATA SECURITY",
+    categoryId: "svc2", // Main category links to security assessments
     items: [
       { name: "Security Assessments", id: "svc2" },
       { name: "Risk Reviews", id: "svc2" },
@@ -65,6 +67,7 @@ export const solutionsCategories = [
   },
   {
     title: "DATA ANALYTICS",
+    categoryId: "svc4", // Main category links to reporting
     items: [
       { name: "KPI Reporting", id: "svc4" },
       { name: "Dashboards", id: "svc5" },
@@ -74,6 +77,7 @@ export const solutionsCategories = [
   },
   {
     title: "GOVERNANCE & COMPLIANCE",
+    categoryId: "svc6", // Main category links to records management
     items: [
       { name: "Records Management", id: "svc6" },
       { name: "Information Governance", id: "svc6" },
@@ -82,6 +86,7 @@ export const solutionsCategories = [
   },
   {
     title: "DATA INFRASTRUCTURE & SUPPORT",
+    categoryId: "svc7", // Main category links to backup & recovery
     items: [
       { name: "Backup & Recovery Support", id: "svc7" },
       { name: "Data Integrity Monitoring", id: "svc7" },
