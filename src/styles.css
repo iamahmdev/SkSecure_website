@@ -64,40 +64,124 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
-  h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
-.bg-brand-primary { background-color: #28963D; }
-.bg-brand-secondary { background-color: #47B732; }
-.bg-brand-dark { background-color: #4E4D4B; }
-.text-brand-primary { color: #28963D; }
-.text-brand-dark { color: #4E4D4B; }
-.text-brand-mid { color: #646263; }
-.border-brand-primary { border-color: #28963D; }
+.bg-brand-primary {
+  background-color: #28963D;
+}
+
+.bg-brand-secondary {
+  background-color: #47B732;
+}
+
+.bg-brand-dark {
+  background-color: #4E4D4B;
+}
+
+.text-brand-primary {
+  color: #28963D;
+}
+
+.text-brand-dark {
+  color: #4E4D4B;
+}
+
+.text-brand-mid {
+  color: #646263;
+}
+
+.border-brand-primary {
+  border-color: #28963D;
+}
 
 .btn-primary {
-  background-color: #28963D; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem;
-  font-weight: 600; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;
+  background-color: #28963D;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.btn-primary:hover { background-color: #47B732; }
+
+.btn-primary:hover {
+  background-color: #47B732;
+}
+
 .btn-secondary {
-  border: 2px solid #28963D; color: #28963D; padding: 0.7rem 1.5rem; border-radius: 0.5rem;
-  font-weight: 600; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; background: transparent;
+  border: 2px solid #28963D;
+  color: #28963D;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
 }
-.btn-secondary:hover { background-color: #28963D; color: white; }
+
+.btn-secondary:hover {
+  background-color: #28963D;
+  color: white;
+}
+
 .btn-white {
-  background: white; color: #28963D; padding: 0.75rem 1.5rem; border-radius: 0.5rem;
-  font-weight: 600; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;
+  background: white;
+  color: #28963D;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.btn-white:hover { background: #f0f0f0; }
+
+.btn-white:hover {
+  background: #f0f0f0;
+}
+
 .btn-outline-white {
-  border: 2px solid white; color: white; padding: 0.7rem 1.5rem; border-radius: 0.5rem;
-  font-weight: 600; transition: all 0.2s; display: inline-flex; align-items: center; gap: 0.5rem; background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
 }
-.btn-outline-white:hover { background: white; color: #28963D; }
+
+.btn-outline-white:hover {
+  background: white;
+  color: #28963D;
+}
