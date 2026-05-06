@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { X, Phone } from "lucide-react";
 import { solutionsCategories, industriesList } from "@/data/company";
 
@@ -29,7 +29,7 @@ export function MobileMenu({ onClose, onExpert }: { onClose: () => void; onExper
           <summary className="font-bold text-brand-dark cursor-pointer">INDUSTRIES</summary>
           <div className="pt-3 space-y-1">
             {industriesList.map(i => (
-              <Link key={i.id} to="/industries" hash={i.id} onClick={onClose} className="block py-1 text-sm text-brand-mid">{i.name}</Link>
+              <Link key={i.id} to={`/industries#${i.id}`} onClick={onClose} className="block py-1 text-sm text-brand-mid">{i.name}</Link>
             ))}
           </div>
         </details>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { Database, Shield, Lock, BarChart2, LayoutDashboard, FolderLock, HardDrive, TrendingUp, ArrowRight } from "lucide-react";
 import { Page } from "@/components/Page";
 import { HeroBanner } from "@/components/HeroBanner";

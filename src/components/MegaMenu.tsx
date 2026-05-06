@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { solutionsCategories, industriesList } from "@/data/company";
@@ -61,7 +61,7 @@ export function MegaMenu({ onClose }: { onClose: () => void }) {
               <h3 className="text-xl font-bold text-brand-dark mb-6">Industries We Serve</h3>
               <div className="grid grid-cols-2 gap-2">
                 {industriesList.map(i => (
-                  <Link key={i.id} to="/industries" hash={i.id} onClick={onClose}
+                  <Link key={i.id} to={`/industries#${i.id}`} onClick={onClose}
                     className="flex items-center gap-2 py-2 text-sm font-medium text-brand-mid hover:text-brand-primary">
                     <ChevronRight size={14} className="text-brand-primary shrink-0" />{i.name}
                   </Link>

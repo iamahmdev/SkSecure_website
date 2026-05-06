@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";

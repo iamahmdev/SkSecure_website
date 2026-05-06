@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
