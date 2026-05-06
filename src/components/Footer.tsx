@@ -4,26 +4,29 @@ import { company } from "@/data/company";
 
 export function Footer() {
   return (
-    <footer className="bg-brand-dark text-white pt-16 pb-6">
+    <footer className="bg-white text-brand-dark pt-16 pb-6">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+        
         <div>
           {/* Logo */}
           <div className="mb-4">
             <img
               src="/sksecuredatalogo.png"
               alt="SKSecureData"
-              style={{ height: "56px", width: "auto", filter: "brightness(0) invert(1)" }}
+              style={{ height: "120px", width: "auto", marginLeft: "-16px" }}
             />
           </div>
-          <p className="text-sm text-gray-300 mb-4">
+
+          <p className="text-sm text-gray-600 mb-4">
             Data security, data management and reporting solutions for modern businesses.
           </p>
+
           <div className="flex gap-3">
             {[Facebook, Instagram, Twitter].map((Icon, i) => (
               <a
                 key={i}
                 href="#"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-primary flex items-center justify-center"
+                className="w-9 h-9 rounded-full bg-gray-100 hover:bg-brand-primary flex items-center justify-center"
               >
                 <Icon size={16} />
               </a>
@@ -33,7 +36,7 @@ export function Footer() {
 
         <div>
           <h4 className="font-bold mb-4">Quick Links</h4>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <ul className="space-y-2 text-sm text-gray-600">
             {[
               { to: "/", label: "Home" },
               { to: "/solutions", label: "Solutions" },
@@ -44,7 +47,9 @@ export function Footer() {
               { to: "/book-consultation", label: "Book Consultation" },
             ].map(l => (
               <li key={l.to}>
-                <Link to={l.to} className="hover:text-[#80CD29]">{l.label}</Link>
+                <Link to={l.to} className="hover:text-[#80CD29]">
+                  {l.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -52,10 +57,12 @@ export function Footer() {
 
         <div>
           <h4 className="font-bold mb-4">Services</h4>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <ul className="space-y-2 text-sm text-gray-600">
             {["Data Management", "Security", "Reporting", "Governance"].map(s => (
               <li key={s}>
-                <Link to="/solutions" className="hover:text-[#80CD29]">{s}</Link>
+                <Link to="/solutions" className="hover:text-[#80CD29]">
+                  {s}
+                </Link>
               </li>
             ))}
           </ul>
@@ -63,15 +70,17 @@ export function Footer() {
 
         <div>
           <h4 className="font-bold mb-4">Contact</h4>
-          <ul className="space-y-3 text-sm text-gray-300">
+          <ul className="space-y-3 text-sm text-gray-600">
             <li className="flex gap-3">
               <Phone size={16} className="shrink-0 mt-0.5 text-[#80CD29]" />
               <a href={`tel:${company.phoneTel}`}>{company.phone}</a>
             </li>
+
             <li className="flex gap-3">
               <Mail size={16} className="shrink-0 mt-0.5 text-[#80CD29]" />
               <a href={`mailto:${company.email}`}>{company.email}</a>
             </li>
+
             <li className="flex gap-3">
               <MapPin size={16} className="shrink-0 mt-0.5 text-[#80CD29]" />
               <span>{company.address}</span>
@@ -80,7 +89,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-gray-400 gap-2">
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between text-xs text-gray-500 gap-2">
         <p>© 2025 SKSecureData. All rights reserved.</p>
         <p>Calgary, Alberta, Canada</p>
       </div>

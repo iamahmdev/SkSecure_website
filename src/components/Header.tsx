@@ -13,7 +13,7 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-8 py-1 flex items-center justify-between">
 
           {/* Left: Logo on top, MENU below — both aligned to same left edge */}
           <div className="flex flex-col" style={{ alignItems: "flex-start" }}>
@@ -21,7 +21,7 @@ export function Header() {
               <img
                 src="/sksecuredatalogo.png"
                 alt="SKSecureData"
-                style={{ height: "125px", width: "auto", display: "block" }}
+                style={{ height: "120px", width: "auto", display: "block" }}
               />
             </Link>
             <button
