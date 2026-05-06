@@ -9,7 +9,7 @@ export function Footer() {
         
         <div>
           {/* Logo */}
-          <div className="mb-4">
+          <div className="mb-0">
             <img
               src="/sksecuredatalogo.png"
               alt="SKSecureData"
@@ -17,7 +17,7 @@ export function Footer() {
             />
           </div>
 
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm text-gray-600 mb-4" style={{ marginTop: "-24px" }}>
             Data security, data management and reporting solutions for modern businesses.
           </p>
 
