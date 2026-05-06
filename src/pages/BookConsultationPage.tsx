@@ -15,6 +15,7 @@ export function BookConsultationPage() {
       <PageHero
         title="Book a Data Security & Management Consultation"
         sub="Get expert guidance to protect, organize and optimize your business data"
+        primary={{ label: "Start Consultation", to: "/book-consultation" }}
       />
 
       <SectionWrapper>
