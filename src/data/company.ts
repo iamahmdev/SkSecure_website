@@ -45,11 +45,49 @@ export const heroSlides = [
 ];
 
 export const solutionsCategories = [
-  { title: "DATA MANAGEMENT", items: ["Data Cleaning & Validation", "Data Organization", "Data Quality Monitoring", "Database Support"] },
-  { title: "DATA SECURITY", items: ["Security Assessments", "Risk Reviews", "Access Control Advisory", "Data Protection Advisory"] },
-  { title: "DATA ANALYTICS", items: ["KPI Reporting", "Dashboards", "Performance Analysis", "Forecasting Support"] },
-  { title: "GOVERNANCE & COMPLIANCE", items: ["Records Management", "Information Governance", "Compliance Readiness"] },
-  { title: "DATA INFRASTRUCTURE & SUPPORT", items: ["Backup & Recovery Support", "Data Integrity Monitoring", "Cloud & Data System Support"] },
+  {
+    title: "DATA MANAGEMENT",
+    items: [
+      { name: "Data Cleaning & Validation", id: "svc1" },
+      { name: "Data Organization", id: "svc1" },
+      { name: "Data Quality Monitoring", id: "svc1" },
+      { name: "Database Support", id: "svc1" }
+    ]
+  },
+  {
+    title: "DATA SECURITY",
+    items: [
+      { name: "Security Assessments", id: "svc2" },
+      { name: "Risk Reviews", id: "svc2" },
+      { name: "Access Control Advisory", id: "svc3" },
+      { name: "Data Protection Advisory", id: "svc3" }
+    ]
+  },
+  {
+    title: "DATA ANALYTICS",
+    items: [
+      { name: "KPI Reporting", id: "svc4" },
+      { name: "Dashboards", id: "svc5" },
+      { name: "Performance Analysis", id: "svc4" },
+      { name: "Forecasting Support", id: "svc4" }
+    ]
+  },
+  {
+    title: "GOVERNANCE & COMPLIANCE",
+    items: [
+      { name: "Records Management", id: "svc6" },
+      { name: "Information Governance", id: "svc6" },
+      { name: "Compliance Readiness", id: "svc9" }
+    ]
+  },
+  {
+    title: "DATA INFRASTRUCTURE & SUPPORT",
+    items: [
+      { name: "Backup & Recovery Support", id: "svc7" },
+      { name: "Data Integrity Monitoring", id: "svc7" },
+      { name: "Cloud & Data System Support", id: "svc10" }
+    ]
+  },
 ];
 
 export const industriesList = [

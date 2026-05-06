@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { solutionsCategories, industriesList } from "@/data/company";
@@ -13,6 +13,17 @@ const sidebar = [
 
 export function MegaMenu({ onClose }: { onClose: () => void }) {
   const [active, setActive] = useState("solutions");
+  const navigate = useNavigate();
+
+  const handleLinkClick = () => {
+    onClose();
+  };
+
+  const handleSolutionClick = (id: string) => {
+    onClose();
+    // Force full page navigation with hash
+    window.location.href = `/solutions#${id}`;
+  };
 
   return (
     <div className="absolute left-0 right-0 top-full bg-white shadow-2xl border-t border-gray-200 max-h-[80vh] overflow-y-auto">
@@ -20,7 +31,7 @@ export function MegaMenu({ onClose }: { onClose: () => void }) {
         <div className="col-span-12 md:col-span-4 bg-brand-dark text-white py-6">
           {sidebar.map(s => (
             s.to ? (
-              <Link key={s.key} to={s.to} onClick={onClose}
+              <Link key={s.key} to={s.to} onClick={handleLinkClick}
                 className="flex items-center justify-between px-6 py-4 hover:bg-black/30 font-semibold tracking-wide text-sm border-l-4 border-transparent">
                 {s.label} <ChevronRight size={16} />
               </Link>
@@ -43,15 +54,19 @@ export function MegaMenu({ onClose }: { onClose: () => void }) {
                     <h4 className="font-bold text-brand-primary text-sm tracking-wider mb-2">{cat.title}</h4>
                     <ul className="space-y-1.5">
                       {cat.items.map(it => (
-                        <li key={it}>
-                          <Link to="/solutions" onClick={onClose} className="text-sm text-brand-mid hover:text-brand-primary">{it}</Link>
+                        <li key={it.name}>
+                          <button 
+                            onClick={() => handleSolutionClick(it.id)} 
+                            className="text-sm text-brand-mid hover:text-brand-primary text-left">
+                            {it.name}
+                          </button>
                         </li>
                       ))}
                     </ul>
                   </div>
                 ))}
               </div>
-              <Link to="/solutions" onClick={onClose} className="inline-flex items-center gap-2 mt-6 font-bold text-brand-primary hover:text-brand-secondary">
+              <Link to="/solutions" onClick={handleLinkClick} className="inline-flex items-center gap-2 mt-6 font-bold text-brand-primary hover:text-brand-secondary">
                 VIEW ALL SOLUTIONS <ChevronRight size={16} />
               </Link>
             </div>
@@ -61,7 +76,7 @@ export function MegaMenu({ onClose }: { onClose: () => void }) {
               <h3 className="text-xl font-bold text-brand-dark mb-6">Industries We Serve</h3>
               <div className="grid grid-cols-2 gap-2">
                 {industriesList.map(i => (
-                  <Link key={i.id} to={`/industries#${i.id}`} onClick={onClose}
+                  <Link key={i.id} to={`/industries#${i.id}`} onClick={handleLinkClick}
                     className="flex items-center gap-2 py-2 text-sm font-medium text-brand-mid hover:text-brand-primary">
                     <ChevronRight size={14} className="text-brand-primary shrink-0" />{i.name}
                   </Link>
