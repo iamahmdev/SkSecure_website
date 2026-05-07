@@ -117,14 +117,14 @@ export function MobileMenu({ onClose, onHelp }: { onClose: () => void; onHelp: (
         <button 
           onClick={onHelp} 
           className="w-full border-2 border-red-600 bg-white text-red-600 px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-red-600 hover:text-white transition-all">
-          <PhoneCall size={18} /> Immediate Help
+          <PhoneCall size={18} /> Talk to an Expert
         </button>
         <Link 
           to="/book-consultation" 
           onClick={handleLinkClick} 
           className="group w-full border-2 border-brand-primary bg-white text-brand-primary px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary transition-all">
-          <Download size={18} className="group-hover:text-white" /> 
-          <span className="group-hover:text-white">Download App</span>
+          <PhoneCall size={18} className="group-hover:text-white" /> 
+          <span className="group-hover:text-white">Book Consultation</span>
         </Link>
       </div>
     </div>

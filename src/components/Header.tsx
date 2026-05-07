@@ -39,14 +39,14 @@ export function Header() {
                 onClick={() => setHelpOpen(true)} 
                 className="border-2 border-red-600 bg-white text-red-600 px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-red-600 hover:text-white transition-all"
               >
-                <PhoneCall size={16} /> Immediate Help
+                <PhoneCall size={16} /> Talk to an Expert
               </button>
               <Link 
-                to="/book-consultation" 
+                to="/book-consultation"
                 className="group border-2 border-brand-primary bg-white text-brand-primary px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-brand-primary transition-all"
               >
-                <Download size={16} className="group-hover:text-white" /> 
-                <span className="group-hover:text-white">Download App</span>
+                <PhoneCall size={16} className="group-hover:text-white" /> 
+                <span className="group-hover:text-white">Book Consultation</span>
               </Link>
             </div>
           </div>
@@ -86,10 +86,10 @@ export function Header() {
         >
           <div className="bg-white rounded-xl p-8 max-w-md w-full" onClick={e => e.stopPropagation()}>
             <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold text-brand-dark">Immediate Help</h3>
+              <h3 className="text-2xl font-bold text-brand-dark">Talk to an Expert</h3>
               <button onClick={() => setHelpOpen(false)}><X /></button>
             </div>
-            <p className="text-brand-mid mb-6">Get immediate assistance from our team</p>
+            <p className="text-brand-mid mb-6">Speak directly with a data specialist</p>
             <a href={`tel:${company.phoneTel}`} className="btn-primary w-full justify-center text-lg">
               <PhoneCall size={20} /> {company.phone}
             </a>
