@@ -19,12 +19,12 @@ export function MobileMenu({ onClose, onHelp }: { onClose: () => void; onHelp: (
   return (
     <div className="fixed inset-0 z-[90] bg-white overflow-y-auto">
       {/* Header Section */}
-      <div className="flex items-center justify-between px-6 py-2 border-b border-gray-200">
-        <Link to="/" onClick={handleLinkClick} className="block">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+        <Link to="/" onClick={handleLinkClick} className="block -my-2">
           <img
             src="/sksecuredatalogo.png"
             alt="SKSecureData"
-            className="h-24 w-auto"
+            className="h-28 w-auto"
           />
         </Link>
         <button onClick={onClose}>
@@ -116,13 +116,14 @@ export function MobileMenu({ onClose, onHelp }: { onClose: () => void; onHelp: (
       <div className="px-6 py-6 space-y-3">
         <button 
           onClick={onHelp} 
-          className="w-full border-2 border-red-600 bg-white text-red-600 px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-red-600 hover:text-white transition-all">
-          <PhoneCall size={18} /> Talk to an Expert
+          className="group w-full border-2 border-brand-primary bg-white text-brand-primary px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-secondary transition-all">
+          <PhoneCall size={18} className="group-hover:text-white" /> 
+          <span className="group-hover:text-white">Talk to an Expert</span>
         </button>
         <Link 
           to="/book-consultation" 
           onClick={handleLinkClick} 
-          className="group w-full border-2 border-brand-primary bg-white text-brand-primary px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary transition-all">
+          className="group w-full border-2 border-brand-primary bg-white text-brand-primary px-4 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-secondary transition-all">
           <PhoneCall size={18} className="group-hover:text-white" /> 
           <span className="group-hover:text-white">Book Consultation</span>
         </Link>

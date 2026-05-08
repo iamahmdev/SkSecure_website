@@ -20,11 +20,11 @@ export function Header() {
             <div className="flex items-center gap-0">
               <button
                 onClick={() => setMegaOpen(!megaOpen)}
-                className="bg-brand-primary text-white p-3 hover:bg-brand-secondary transition-colors"
+                className="bg-brand-primary text-white p-3 hover:bg-brand-secondary transition-colors self-center"
               >
                 {megaOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
-              <Link to="/" className="block -my-3">
+              <Link to="/" className="block -my-3 self-center">
                 <img
                   src="/sksecuredatalogo.png"
                   alt="SKSecureData"
@@ -53,13 +53,13 @@ export function Header() {
           </div>
 
           {/* Mobile Header */}
-          <div className="md:hidden flex items-center justify-between -my-4">
+          <div className="md:hidden flex items-center justify-between py-2">
             {/* Logo Left */}
-            <Link to="/" className="block">
+            <Link to="/" className="block -my-2">
               <img
                 src="/sksecuredatalogo.png"
                 alt="SKSecureData"
-                className="h-40 w-auto"
+                className="h-28 w-auto"
               />
             </Link>
 
