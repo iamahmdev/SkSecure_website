@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, PhoneCall, Download } from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 import { MobileMenu } from "./MobileMenu";
 import { company } from "@/data/company";
@@ -16,34 +16,35 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           {/* Desktop Header */}
           <div className="hidden md:flex items-center justify-between py-2">
-            {/* Left: Logo + Menu Button */}
-            <div className="flex items-center gap-3">
-              <Link to="/" className="block">
+            {/* Left: Menu Button + Logo */}
+            <div className="flex items-center gap-0">
+              <button
+                onClick={() => setMegaOpen(!megaOpen)}
+                className="bg-brand-primary text-white p-3 hover:bg-brand-secondary transition-colors"
+              >
+                {megaOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+              <Link to="/" className="block -my-3">
                 <img
                   src="/sksecuredatalogo.png"
                   alt="SKSecureData"
                   className="h-28 w-auto"
                 />
               </Link>
-              <button
-                onClick={() => setMegaOpen(!megaOpen)}
-                className="flex items-center gap-1 text-xs font-bold tracking-widest text-brand-dark hover:text-brand-primary"
-              >
-                {megaOpen ? <X size={16} /> : <Menu size={16} />} MENU
-              </button>
             </div>
 
             {/* Right: CTA Buttons */}
             <div className="flex items-center gap-3">
               <button 
                 onClick={() => setHelpOpen(true)} 
-                className="border-2 border-red-600 bg-white text-red-600 px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-red-600 hover:text-white transition-all"
+                className="group border-2 border-brand-primary bg-white text-brand-primary px-6 py-2.5 rounded font-semibold text-sm flex items-center gap-2 hover:bg-brand-secondary transition-colors"
               >
-                <PhoneCall size={16} /> Talk to an Expert
+                <PhoneCall size={16} className="group-hover:text-white" /> 
+                <span className="group-hover:text-white">Talk to an Expert</span>
               </button>
               <Link 
                 to="/book-consultation"
-                className="group border-2 border-brand-primary bg-white text-brand-primary px-4 py-2 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-brand-primary transition-all"
+                className="group border-2 border-brand-primary bg-white text-brand-primary px-6 py-2.5 rounded font-semibold text-sm flex items-center gap-2 hover:bg-brand-secondary transition-colors"
               >
                 <PhoneCall size={16} className="group-hover:text-white" /> 
                 <span className="group-hover:text-white">Book Consultation</span>
@@ -52,13 +53,13 @@ export function Header() {
           </div>
 
           {/* Mobile Header */}
-          <div className="md:hidden flex items-center justify-between py-1">
+          <div className="md:hidden flex items-center justify-between -my-4">
             {/* Logo Left */}
             <Link to="/" className="block">
               <img
                 src="/sksecuredatalogo.png"
                 alt="SKSecureData"
-                className="h-24 w-auto"
+                className="h-40 w-auto"
               />
             </Link>
 
